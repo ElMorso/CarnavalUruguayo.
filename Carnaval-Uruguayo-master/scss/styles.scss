@@ -1,0 +1,250 @@
+// Definición de keyframes
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+// Variables
+$primary-color: #020305;
+$secondary-color: #0b0f12;
+$background-gradient: linear-gradient(90deg, #f50a0a, #fd5506, #e8ec09, #db920b, #e910d7);
+$button-background: #05080a;
+$border-radius: 10px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+$form-max-width: 400px;
+
+// Mixins
+@mixin border-radius($radius) {
+    border: 2px solid $primary-color;
+    border-radius: $radius;
+}
+
+@mixin primary-button {
+    background-color: $button-background;
+    border: 2px solid darken($button-background, 5%);
+    border-radius: $border-radius;
+    color: #fff;
+    font-weight: bold;
+}
+
+// Estilos
+body {
+    animation: backgroundAnimation 5s linear infinite;
+    background: $background-gradient;
+    background-size: 200% 100%;
+    overflow-x: hidden;
+}
+
+.map-container {
+    position: static;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 80%;
+        left: 5%;
+    }
+}
+
+.form {
+    @include primary-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    max-width: $form-max-width;
+    box-shadow: $box-shadow;
+}
+
+.form-control {
+    @include border-radius(5px);
+    border: 2px solid #000000;
+}
+
+.btn-primary {
+    @include primary-button;
+}
+
+.form-check-label {
+    color: $secondary-color;
+}
+
+.tituloform {
+    color: $primary-color;
+    position: relative; 
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloindex {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #000000;
+    text-align: center; 
+    margin: 0;
+}
+
+
+.text-justify {
+    font-size: 16px; 
+    line-height: 2.5; 
+    text-align: center;
+    color: #414141;
+    font-weight: 200;
+    background-color: transparent;
+}
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.mejorformulariodelmundo {
+    margin-top: -150px;
+}
+
+.container {
+    position: relative;
+}
+
+.tituloindex {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; 
+    text-align: center;
+    color: whitesmoke;
+}
+
+.navbar-brand {
+    margin-right: 350px;
+    font-family: 'Comic Sans MS', cursive;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, transparent, #ecaf06, transparent);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.5s;
+
+    &:hover {
+        background-position: 0;
+    }
+}
+
+.navbar-brand, .nav-link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #d8c3c3;
+}
+
+.nav-link {
+    text-align: right;
+    margin-left: 0;
+}
+
+.cuadro-oscuro {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: $border-radius;
+    margin-top: 20px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.titulo-con-imagen {
+    text-align: center;
+}
+
+.titulo-con-imagen h2 {
+    margin: 0;
+}
+
+.espacio-para-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.espacio-para-imagen img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.espacio-entre-foto-y-footer {
+    height: 50px;
+}
+
+#myCarousel {
+    margin-bottom: 100px;
+    margin-top: 90px;
+}
+
+.carousel-caption {
+    bottom: 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    position: absolute;
+    margin-left: -170px;
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+.carousel-item {
+    margin-top: 20px;
+}
+
+.gray-rounded-box {
+    background-color: #333;
+    color: #fff;
+    border-radius: $border-radius;
+    padding: 20px;
+    margin-bottom: 80px;
+    margin-top: 20px;
+}
+
+.cuadro-oscuro h4 {
+    margin: 0;
+    padding: 10px;
+}
